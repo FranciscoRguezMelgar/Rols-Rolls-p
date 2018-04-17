@@ -1,0 +1,35 @@
+<!--
+  Generated template for the GroupsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Grupos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>	
+
+	<button ion-button (click)="this.psc.clear()">
+		Borrar todos
+	</button>	
+	<ion-card *ngFor="let group of psc.groups">
+		<ion-card-header>			
+			<strong>{{group.name}}</strong>			
+		</ion-card-header>
+	</ion-card>
+
+	
+
+</ion-content>
+
+<ion-fab bottom right>
+	<button [navPush]="CreateGroupPage" ion-fab>
+		<ion-icon name="add">			
+		</ion-icon>
+	</button>
+</ion-fab>
