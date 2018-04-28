@@ -1,9 +1,10 @@
 export class Player{
+	public key?:string;
 	public nick: string;
-	public address:string; //MAC address
-	constructor(n: string, a: string){
+	public uid: string;
+	constructor(n: string, u: string){
 		this.nick = n;
-		this.address = a;
+		this.uid = u;
 	}
 
 }

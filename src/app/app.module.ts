@@ -3,49 +3,63 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { BLE } from '@ionic-native/ble';
-import { IonicStorageModule } from '@ionic/storage';
 
-import { BtComp } from '../logic/BtComp';
 import { PersistComp } from '../logic/PersistComp';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { Device } from '@ionic-native/device';
+import { FIRE_CONF } from './firebase.credentials';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { CreateGroupPage } from '../pages/create-group/create-group';
 import { GroupsPage } from '../pages/groups/groups';
 import { MainMenuPage } from '../pages/main-menu/main-menu';
 import { JoiningPage } from '../pages/joining/joining';
+import { LoginPage } from '../pages/login/login';
+import { SigninPage } from '../pages/signin/signin';
+import { CreateAccountPage } from '../pages/create-account/create-account';
+import { TextsPage } from '../pages/texts/texts';
+import { RollsPage } from '../pages/rolls/rolls';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CreateGroupPage,
     GroupsPage,
     MainMenuPage,
-    JoiningPage
+    JoiningPage,
+    TextsPage,
+    RollsPage,
+    LoginPage,
+    CreateAccountPage,
+    SigninPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(FIRE_CONF),
+    AngularFireDatabaseModule,              
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    CreateGroupPage,
     GroupsPage,
     MainMenuPage,
-    JoiningPage
+    JoiningPage,
+    TextsPage,
+    RollsPage,
+    LoginPage,
+    CreateAccountPage,
+    SigninPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    IonicStorageModule,
-    BLE,
-    BtComp,
     PersistComp,
+    Device,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
