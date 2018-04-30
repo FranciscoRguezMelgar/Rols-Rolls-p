@@ -83,4 +83,8 @@
     <plugin name="cordova-sqlite-storage" spec="^2.3.0" />
     <plugin name="cordova-plugin-ble-central" spec="^1.1.4" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <plugin name="com.synconset.imagepicker" spec="~2.1.10">
+        <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="App wants to access your gallery" />
+    </plugin>
 </widget>

@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Device } from '@ionic-native/device';
 import { FIRE_CONF } from './firebase.credentials';
+import { ImagePicker } from '@ionic-native/image-picker';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -21,6 +22,9 @@ import { SigninPage } from '../pages/signin/signin';
 import { CreateAccountPage } from '../pages/create-account/create-account';
 import { TextsPage } from '../pages/texts/texts';
 import { RollsPage } from '../pages/rolls/rolls';
+import { ImagesPage } from '../pages/images/images'
+import { MapPage } from '../pages/map/map'
+import { ChatPage } from '../pages/chat/chat'
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { RollsPage } from '../pages/rolls/rolls';
     RollsPage,
     LoginPage,
     CreateAccountPage,
-    SigninPage
+    SigninPage,
+    ImagesPage,
+    MapPage,
+    ChatPage
   ],
   imports: [
     BrowserModule,
@@ -53,13 +60,17 @@ import { RollsPage } from '../pages/rolls/rolls';
     RollsPage,
     LoginPage,
     CreateAccountPage,
-    SigninPage
+    SigninPage,
+    ImagesPage,
+    MapPage,
+    ChatPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     PersistComp,
     Device,
+    ImagePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

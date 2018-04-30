@@ -14,7 +14,7 @@
 
 <ion-content padding>
 	<button ion-button large full icon-start>
-		<ion-icon large name="map">
+		<ion-icon large name="map"[navPush]='mapPage'>
 		</ion-icon>
 		Mapas
 	</button>
@@ -24,7 +24,7 @@
 		Textos
 	</button>
 	<button ion-button large full icon-start>
-		<ion-icon large name="chatbubbles">
+		<ion-icon large name="chatbubbles"[navPush]='chatPage'>
 		</ion-icon>
 		Chats
 	</button>
@@ -33,7 +33,7 @@
 		</ion-icon>
 		Tiradas
 	</button>
-	<button ion-button large full icon-start>
+	<button ion-button large full icon-start [navPush]='imagesPage'>
 		<ion-icon large name="image">
 		</ion-icon>
 		Imágenes
