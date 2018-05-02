@@ -25,6 +25,7 @@ import { RollsPage } from '../pages/rolls/rolls';
 import { ImagesPage } from '../pages/images/images'
 import { MapPage } from '../pages/map/map'
 import { ChatPage } from '../pages/chat/chat'
+import { PasswordPage } from '../pages/password/password';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ChatPage } from '../pages/chat/chat'
     SigninPage,
     ImagesPage,
     MapPage,
-    ChatPage
+    ChatPage,
+    PasswordPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { ChatPage } from '../pages/chat/chat'
     SigninPage,
     ImagesPage,
     MapPage,
-    ChatPage
+    ChatPage,
+    PasswordPage
   ],
   providers: [
     StatusBar,

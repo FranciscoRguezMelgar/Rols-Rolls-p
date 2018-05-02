@@ -6,6 +6,7 @@ import { Group } from "../../model/Group"
 //import { Player } from "../../model/Player"
 
 import { MainMenuPage } from '../main-menu/main-menu';
+import { PasswordPage } from '../password/password';
 
 
 /**
@@ -47,8 +48,13 @@ export class GroupsPage {
 		//TODO: hacer que vaya al menú principal y que funcionen las cosas.
 		//es muy recomendable que pongamos un current group para referenciarlo rápidamente
 		//no hay que olvidarse de hacer updates para que los cambios se guarden.
+
 		
-		this.psc.currentGroupSus = this.psc.groupsRef$.snapshotChanges().map(
+		this.navCtrl.setRoot(PasswordPage, {"group":group})
+
+
+
+		/*this.psc.currentGroupSus = this.psc.groupsRef$.snapshotChanges().map(
 			list => {
 				list.filter(el => el.key === group.key).map(
 					element => {
@@ -58,7 +64,7 @@ export class GroupsPage {
 					}
 				)
 		}).subscribe();
-		this.navCtrl.setRoot(MainMenuPage)
+		this.navCtrl.setRoot(MainMenuPage)*/
 		
 	}
 	ionViewDidLeave(){
