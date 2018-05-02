@@ -26,6 +26,7 @@ import { ImagesPage } from '../pages/images/images'
 import { MapPage } from '../pages/map/map'
 import { ChatPage } from '../pages/chat/chat'
 import { PasswordPage } from '../pages/password/password';
+import { ReadTextPage } from '../pages/read-text/read-text';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PasswordPage } from '../pages/password/password';
     ImagesPage,
     MapPage,
     ChatPage,
-    PasswordPage
+    PasswordPage,
+    ReadTextPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { PasswordPage } from '../pages/password/password';
     ImagesPage,
     MapPage,
     ChatPage,
-    PasswordPage
+    PasswordPage,
+    ReadTextPage
   ],
   providers: [
     StatusBar,

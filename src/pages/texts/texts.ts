@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PersistComp } from '../../logic/PersistComp'
 import { Text } from '../../model/Text'
+import { ReadTextPage } from '../read-text/read-text';
+import { MainMenuPage } from '../main-menu/main-menu'
 //import { Observable } from 'rxjs/Observable'
 //import { Subscription } from 'rxjs/Subscription'
 /**
@@ -19,6 +21,8 @@ import { Text } from '../../model/Text'
 export class TextsPage {
 	public textos: Array<Text>;
 	public texts$;
+	public mainMenu = MainMenuPage;
+	
 	constructor(public navCtrl: NavController, public navParams: NavParams, public psc: PersistComp) {
 	}
 	ionViewDidLoad() {
@@ -31,6 +35,10 @@ export class TextsPage {
 		}
 		this.texts$ = this.textos;
 		console.log('ionViewDidLoad TextsPage');
+	}
+
+	read(text){
+	this.navCtrl.setRoot(ReadTextPage, {"texto":text})
 	}
 
 }

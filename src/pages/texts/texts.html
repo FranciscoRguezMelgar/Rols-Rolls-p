@@ -14,11 +14,17 @@
 
 
 <ion-content padding>
-	<ion-card *ngFor='let text of psc.currentGroup.texts'>
+	<ion-card *ngFor='let text of psc.currentGroup.texts'(click)="read(text)">
 		<ion-card-header icon-start>
 			<ion-icon large name='clipboard'></ion-icon>
 			<strong>{{text.title}}</strong>
 		</ion-card-header>
 	</ion-card>
+
+	<button ion-button large full icon-start [navPush]='mainMenu'>
+		<ion-icon large name="clipboard">
+		</ion-icon>
+		Volver al menu principal
+	</button>
 
 </ion-content>
